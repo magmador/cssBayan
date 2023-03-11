@@ -7,8 +7,15 @@
     color: blue;
 }
 
+.center:hover {
+    color: black;
+}
+
 h1 {
     color: black;
+    font: 1.6em Arial;
+    margin-bottom: 0;
+    font-weight: 900;
 }
 
 img {
@@ -16,26 +23,16 @@ img {
     width: auto;
 }
 
-h1 {
-    font: 1.6em Arial;
-    margin-bottom: 0;
-    font-weight: 900;
-}
-
 details {
     border-top: 2px solid black;
     cursor: pointer;
 }
 
-details>summary {
+details summary {
     list-style: none;
     font-family: Arial;
     font-size: 1.6em;
     font-weight: 900;
-}
-
-.center:hover {
-    color: black;
 }
 
 details[open] summary {
@@ -44,14 +41,14 @@ details[open] summary {
 
 details[open] img {
     animation-name: open;
-    animation-duration: 0.6s;
+    animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
 }
 
 @keyframes open {
     0% {
         transform: scale(0.7);
-        opacity: 0.6;
+        opacity: 0.5;
     }
 
     100% {
