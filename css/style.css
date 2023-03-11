@@ -1,8 +1,5 @@
 .center {
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
     width: 20%;
     color: blue;
 }
@@ -18,28 +15,23 @@ h1 {
     font-weight: 900;
 }
 
-img {
-    height: auto;
-    width: auto;
-}
-
-details {
+.DetailHeader {
     border-top: 2px solid black;
     cursor: pointer;
-}
-
-details summary {
+    position: relative;
     list-style: none;
     font-family: Arial;
     font-size: 1.6em;
     font-weight: 900;
 }
 
-details[open] summary {
-    color: black;
+.HiddenContent {
+    display: none;
 }
 
-details[open] img {
+.DetailHeader:hover+.HiddenContent {
+    display: block;
+    color: black;
     animation-name: open;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
