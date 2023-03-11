@@ -19,7 +19,7 @@ h1 {
 }
 
 details {
-    border-top: 2px solid rgb(0, 0, 0);
+    border-top: 2px solid black;
     cursor: pointer;
 }
 
@@ -34,6 +34,9 @@ details>summary {
     color: black;
 }
 
+details[open] summary {
+    color: black;
+}
 
 details[open] img {
     animation-name: open;
