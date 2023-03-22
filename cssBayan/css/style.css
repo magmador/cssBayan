@@ -1,0 +1,89 @@
+.Wrapper {
+    margin: 0 auto;
+    width: 20%;
+    color: blue;
+}
+
+.Wrapper:hover {
+    color: black;
+}
+
+h1 {
+    color: black;
+    font: 1.6em Arial;
+    margin-bottom: 0;
+    font-weight: 900;
+}
+
+.Header {
+    padding: 10px 0;
+    border-top: 2px solid black;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HiddenContent {
+    display: none;
+}
+
+.Header:hover+.HiddenContent {
+    display: block;
+    color: black;
+    animation-name: open;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.IconContainer {
+    display: none
+}
+
+.Wrapper:hover .IconContainer {
+    display: block
+}
+
+.DefaultIcon {
+    display: block;
+}
+
+.HoveredIcon {
+    display: none;
+}
+
+.Header:hover .HoveredIcon {
+    display: block;
+}
+
+.Header:hover .DefaultIcon {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    user-select: none;
+}
+
+label:active {
+    opacity: 0.6;
+}
+
+#RadioElement:checked~.HiddenContent,
+#RadioElement2:checked~.HiddenContent,
+#RadioElement3:checked~.HiddenContent,
+#RadioElement4:checked~.HiddenContent {
+    display: block;
+}
+
+@keyframes open {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
